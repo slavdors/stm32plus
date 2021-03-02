@@ -15,7 +15,7 @@ env=env.Clone()
 
 # verify that this example is compatible with the selected MCU
 
-sconscriptFile=(lambda x:x).func_code.co_filename
+sconscriptFile=(lambda x:x).__code__.co_filename
 sconscriptDir=os.path.dirname(sconscriptFile)
 compatFile=os.path.join(sconscriptDir,"compat.txt");
 
